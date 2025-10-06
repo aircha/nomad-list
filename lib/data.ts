@@ -773,13 +773,13 @@ export const filterByCategory = (cities: City[], category: FilterCategory): City
         case "weather":
             return cities.filter((city) => city.temperature >= 20 && city.temperature <= 28)
         case "internet":
-            return cities.filter((city) => city.internetSpeed > 20)
+            return cities.filter((city) => city.internetSpeed >= 20)
         case "safety":
             return cities.filter((city) => city.safety === "high")
         case "air":
             return cities.filter((city) => city.airQuality < 50)
         case "warm":
-            return cities.filter((city) => city.temperature > 25)
+            return cities.filter((city) => city.temperature >= 25)
         default:
             return cities
     }
