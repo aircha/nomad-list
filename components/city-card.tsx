@@ -24,7 +24,7 @@ export function CityCard({city, onClick}: CityCardProps) {
             stars.push(<Star key="half" className="w-4 h-4 fill-amber-400/50 text-amber-400"/>)
         }
 
-        const remainingStars = 5 - Math.ceil(score)
+        const remainingStars = 5 - fullStars - (hasHalfStar ? 1 : 0)
         for (let i = 0; i < remainingStars; i++) {
             stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-muted-foreground/30"/>)
         }
